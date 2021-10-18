@@ -14,8 +14,8 @@ int level2(int num1,int num2)
 
 double level3(double num1,double num2)
 {
-	double get=num1/num2;
-	int get1=get*100;
+	double get=(num1/num2)*100.00;
+	int get1=get;
 	double get2=get1/100.00;
 	return get2;
 }
@@ -60,7 +60,6 @@ int main()
 					}
 				}
 			}
-			cout<<score/pro_num*100;
 			break;
 			
 		case 2:
@@ -91,7 +90,6 @@ int main()
 					}
 				}
 			}
-			cout<<score/pro_num*100;
 			break;
 			
 		case 3:
@@ -149,7 +147,6 @@ int main()
 			
 			
 			}
-			cout<<score/pro_num*100;
 			break;
 			
 		case 4:
@@ -207,7 +204,6 @@ int main()
 			
 			
 			}
-			cout<<score/pro_num*100;
 			break;
 		case 5:
 			for(int i=0;i<pro_num;i++)
@@ -220,6 +216,7 @@ int main()
 				{
 				
 					result=num1+num2;
+					
 					cout<<num1<<cal[cal_ch]<<num2<<"=?"<<endl;
 					cin>>answer;
 					if(answer==result)
@@ -230,6 +227,7 @@ int main()
 				else if(cal_ch==1)
 				{
 					result=num1-num2;
+					
 					cout<<num1<<cal[cal_ch]<<num2<<"=?"<<endl;
 					cin>>answer;
 					if(answer==result)
@@ -240,6 +238,7 @@ int main()
 				else if(cal_ch==2)
 				{
 					result=num1*num2;
+					
 					cout<<num1<<cal[cal_ch]<<num2<<"=?"<<endl;
 					cin>>answer;
 					if(answer==result)
@@ -249,7 +248,8 @@ int main()
 				}
 				else
 				{
-					result=level2(num1,num2);
+					result=level3(num1,num2);
+					
 					cout<<num1<<cal[cal_ch]<<num2<<"=?"<<endl;
 					cin>>answer;
 					if(answer==result)
@@ -259,8 +259,7 @@ int main()
 				}
 			
 			}
-			cout<<score/pro_num*100;
-			break;
+			break;	
 		case 6:
 			for(int i=0;i<pro_num;i++)
 			{
@@ -310,10 +309,15 @@ int main()
 					}
 				}
 			
-			}
-			cout<<score/pro_num*100;
+			}	
 			break;	
 			
 	}
+	if((score/pro_num*100)<60)
+		{
+			cout<<"你的成绩："<<score/pro_num*100<<" "<<"太离谱了" <<endl; 
+		}else{
+			cout<<"你的成绩："<<score/pro_num*100<<" "<<"可还行" <<endl;
+		}
 	return 0;
  } 
