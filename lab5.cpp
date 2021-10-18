@@ -260,6 +260,58 @@ int main()
 			
 			}
 			cout<<score/pro_num*100;
+			break;
+		case 6:
+			for(int i=0;i<pro_num;i++)
+			{
+				double result,answer;
+				double num1=((rand() % 999+1)+(rand()%99+1)/100.00);
+				double num2= ((rand() % 999+1)+(rand()%99+1)/100.00);
+				cal_ch=rand() % 4+0;
+				if(cal_ch==0)
+				{
+				
+					result=num1+num2;
+					cout<<num1<<cal[cal_ch]<<num2<<"=?"<<endl;
+					cin>>answer;
+					if(answer==result)
+					{
+						score++;
+					}
+				}
+				else if(cal_ch==1)
+				{
+					result=num1-num2;
+					cout<<num1<<cal[cal_ch]<<num2<<"=?"<<endl;
+					cin>>answer;
+					if(answer==result)
+					{
+						score++;
+					}
+				}
+				else if(cal_ch==2)
+				{
+					result=num1*num2;
+					cout<<num1<<cal[cal_ch]<<num2<<"=?"<<endl;
+					cin>>answer;
+					if(answer==result)
+					{
+						score++;
+					}
+				}
+				else
+				{
+					result=level2(num1,num2);
+					cout<<num1<<cal[cal_ch]<<num2<<"=?"<<endl;
+					cin>>answer;
+					if(answer==result)
+					{
+						score++;
+					}
+				}
+			
+			}
+			cout<<score/pro_num*100;
 			break;	
 			
 	}
